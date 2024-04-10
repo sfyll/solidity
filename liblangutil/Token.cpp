@@ -224,8 +224,17 @@ std::tuple<Token, unsigned int, unsigned int> fromIdentifierOrKeyword(std::strin
 		}
 		return std::make_tuple(Token::Identifier, 0, 0);
 	}
+	else {
+		std::string baseType(_literal.begin(), positionM);
+		Token keyword = keywordByName(baseType);
+		if (keyword == Token::SUInt) {
+			return std::make_tuple(Token::UInt, 0, 0);
+		}
+		else {
+			return std::make_tuple(keywordByName(_literal), 0, 0);
+		}
+	}
 
-	return std::make_tuple(keywordByName(_literal), 0, 0);
 }
 
 }

@@ -206,13 +206,14 @@ namespace solidity::langutil
 	K(SubYear, "years", 0)                                             \
 	/* type keywords*/                                                 \
 	K(Int, "int", 0)                                                   \
-	K(UInt, "uint", 0)                                                 \
+	K(UInt, "uint", 0)  	 										   \
 	K(Bytes, "bytes", 0)                                               \
 	K(String, "string", 0)                                             \
 	K(Address, "address", 0)                                           \
 	K(Bool, "bool", 0)                                                 \
 	K(Fixed, "fixed", 0)                                               \
 	K(UFixed, "ufixed", 0)                                             \
+	K(SUInt, "suint", 0)											   \
 	T(IntM, "intM", 0)                                                 \
 	T(UIntM, "uintM", 0)                                               \
 	T(BytesM, "bytesM", 0)                                             \
